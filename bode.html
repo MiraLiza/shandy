@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#000000">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+</head>
+<body>
+
+<script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+
+<style type="text/css">
+  body,h1 {font-family: "Raleway", Arial, sans-serif}
+  h1 {letter-spacing: 6px}
+  .w3-row-padding img {margin-bottom: 12px}
+   html, body {
+     height: 100%;
+     width: 100%;
+   }
+   #instanceOne {
+     width:50%;
+     height: 800px;
+     position: relative;
+     margin: auto;
+   }
+   #instanceTwo {
+     margin: 0 auto;
+     width: 800px;
+     height: 600px;
+     position: relative;
+   }
+   .mirador-app {
+     border: 2px solid black;
+   }
+</style>
+
+    
+
+<header class="w3-panel w3-center w3-opacity" style="padding:65px 16px">
+  <h1 class="w3-xlarge">Translations of Laurence Sterne's</h1>
+  <h1>Tristram Shandy</h1>
+    <div class="w3-padding-32">
+      <div class="w3-bar w3-border">
+        <a href="index.html" class="w3-bar-item w3-button">Overview</a>
+        <a href="original.html" class="w3-bar-item w3-button w3-light-grey">Original text</a>
+        <a href="#" class="w3-bar-item w3-button">Bode Translation</a>
+        <a href="comparative_view.html" class="w3-bar-item w3-button w3-light-grey">Comparisons</a>
+      </div>
+    </div>
+  
+</header>
+
+<div class="w3-center">
+    <p>
+    Here you can explore the first German translation with its facsimiles and a plain text. The plain text has not been prrofread and may contain transcription errors.     
+</p>
+<p>
+    Also, note that this is the text from 1776 which already contains some corrections of the translator. The digital library of the 'Münchner Digitalisierungszentrum' also offers a digital version of the 1774 version. 
+</p></div>
+
+
+<div id="instanceOne"/> 
+
+<script type="text/javascript">
+  var miradorInstanceOne = Mirador.viewer({
+    id: 'instanceOne',
+    windows: [{
+      loadedManifest:'https://opendata.uni-halle.de//json/iiif/1981185920/90723/fc3c144b-95a1-46bf-b691-bc59ab2e7afe/manifest',
+      canvasIndex: 0,
+      thumbnailNavigationPosition: 'far-bottom',
+    }]
+  })
+
+    </script>
+
+</body>
+<!-- still to do: add transcription -->
+
