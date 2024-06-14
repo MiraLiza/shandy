@@ -28,17 +28,18 @@
    #instanceOne {
      width:50%;
      height: 800px;
-     position: relative;
+     position:relative;
      margin: auto;
    }
    #instanceTwo {
-     margin: 0 auto;
+     margin: 0 ;
      width: 800px;
      height: 600px;
      position: relative;
    }
    .mirador-app {
      border: 2px solid black;
+     position:static;
    }
 </style>
 
@@ -65,7 +66,14 @@
 </div>
 
 
-<div id="instanceOne"/> 
+<div id="instanceOne"></div>
+
+
+<footer class="w3-panel">
+  <div class="w3-padding-32">
+    <p>Tristram Shandy in Translation. Brought to you by Miriam Sibitz.</p>
+  </div>
+</footer>
 
 <script type="text/javascript">
   var miradorInstanceOne = Mirador.viewer({
@@ -78,6 +86,8 @@
   })
 
     </script>
+
+    
 
 </body>
 <!-- still to do: add transcription -->
