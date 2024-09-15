@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shandy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <style>
+    body,
+    h1 {
+      font-family: "Raleway", Arial, sans-serif
+    }
+
+    h1 {
+      letter-spacing: 6px
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 12px
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+  <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+
+  <style type="text/css">
+    body,
+    h1 {
+      font-family: "Raleway", Arial, sans-serif
+    }
+
+    h1 {
+      letter-spacing: 6px
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 12px
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #instanceOne {
+      width: 50%;
+      height: 800px;
+      position: relative;
+      margin: auto;
+    }
+
+    #instanceTwo {
+      margin: 0 auto;
+      width: 800px;
+      height: 600px;
+      position: relative;
+    }
+
+    .mirador-app {
+      border: 2px solid black;
+    }
+  </style>
+
+<!-- navbar -->
+  <div class="w3-top" style="z-index: 9999;">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-dark-grey"><i
+          class="fa fa-home w3-margin-right"></i>Overview</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button" title="About the texts">About the texts <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <a href="about_the_text.html" class="w3-bar-item w3-button">Original Publication</a>
+          <a href="about_the_translations.html" class="w3-bar-item w3-button">German Translations</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button" title="Facsimiles">Facsimiles <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <a href="original.html" class="w3-bar-item w3-button">Original Text</a>
+          <a href="bode.html" class="w3-bar-item w3-button">Bode Translation</a>
+          <a href="zueckert.html" class="w3-bar-item w3-button">Zückert Translation</a>
+          <a href="seubert.html" class="w3-bar-item w3-button">Seubert Translation</a>
+          <a href="comparative_view.html" class="w3-bar-item w3-button">Comparative View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- !PAGE CONTENT! -->
+
+  <div class="w3-content" style="max-width:1500px">
+    <!-- Header -->
+    <header class="w3-panel w3-center w3-opacity" style="padding:52px 10px">
+      <h1 class="w3-xlarge">Translations of Laurence Sterne's</h1>
+      <h1>Tristram Shandy</h1>
+    </header>
+    <!-- todo: reduce padding after header= -->
+    <div class="w3-center">
+      <!-- todo: center div not text-->
+      <p>
+        Here, you can access the translation by Adolf Seubert.
+      </p>
+
+    </div>
+
+
+    <div id="instanceOne" class="w3-center w3-container"></div>
+
+    <footer class="w3-panel">
+      <div class="w3-padding-32">
+        <p>Tristram Shandy in Translation. Brought to you by Miriam Sibitz.</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      var miradorInstanceOne = Mirador.viewer({
+        id: 'instanceOne',
+        windows: [{
+          loadedManifest: 'https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11338361/manifest',
+          canvasIndex: 0,
+          thumbnailNavigationPosition: 'far-bottom',
+        }]
+      })
+
+    </script>
+
+</body>
+<!-- still to do: add transcription -->
+
+
+
+

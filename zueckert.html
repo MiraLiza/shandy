@@ -51,8 +51,6 @@
    }
 </style>
 
-<!-- navbar -->
-
 <div class="w3-top">
   <div class="w3-bar w3-theme-d2 w3-left-align" style="z-index: 99;">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
@@ -75,7 +73,7 @@
 
 
 <!--Hamburger Bar-->
-<div id="hamBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+<div id="hamBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; z-index:99">
   <a href="about_the_translations.html" class="w3-bar-item w3-button w3-padding-large" onclick="openNav()">Timeline of Translations</a>
   <a href="original.html" class="w3-bar-item w3-button w3-padding-large" onclick="openNav()">Original</a>
   <a href="bode.html" class="w3-bar-item w3-button w3-padding-large" onclick="openNav()">Bode</a>
@@ -84,23 +82,27 @@
   <a href="comparative_view.html" class="w3-bar-item w3-button w3-padding-large" onclick="openNav()">Comparative View</a>
 
 </div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
 <!-- Header -->
 <header class="w3-panel w3-center w3-opacity" style="padding:52px 10px">
   <h1 class="w3-xlarge">Translations of Laurence Sterne's</h1>
   <h1>Tristram Shandy</h1>
-  <h1 class="w3-xlarge">Bode Translation</h1>
+  <h1 class="w3-xlarge">Zückert translation</h1>
 </header>
-
+<!-- todo: reduce padding after header= -->
 <div class="w3-center">
+  <!-- todo: center div not text-->
     <p>
-    Here you can explore the second notworthy German translation <em>Tristram Schandis Leben und Meynungen.</em>. This translation has been of particular importance. 
-</p>
+        Here, you can access the second edition of Zückert's translation <em>Das Leben und die Meynungen des Tristram Shandy</em>. The name of the translator
+         is ommitted in the book itself and instead Wieland - a famous editor at the time - is featured against his will. 
+    </p>
+
 </div>
 
 
-<div id="instanceOne"></div>
-
+<div id="instanceOne" class="w3-center w3-container"></div>
 
 <footer class="w3-panel">
   <div class="w3-padding-32">
@@ -111,29 +113,28 @@
 <script type="text/javascript">
   var miradorInstanceOne = Mirador.viewer({
     id: 'instanceOne',
+
     windows: [{
-      loadedManifest:'https://opendata.uni-halle.de//json/iiif/1981185920/90723/fc3c144b-95a1-46bf-b691-bc59ab2e7afe/manifest',
+      loadedManifest:'https://content.staatsbibliothek-berlin.de/dc/1856130606/manifest',
       canvasIndex: 0,
       thumbnailNavigationPosition: 'far-bottom',
     }]
   })
 
-
     </script>
-    <script>
-      function openNav() {
-        var x = document.getElementById("hamBar");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else { 
-          x.className = x.className.replace(" w3-show", "");
-        }
-      }
-      </script>
-
-
-
+<script>
+  function openNav() {
+    var x = document.getElementById("hamBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
 </body>
 </html>
 <!-- still to do: add transcription -->
+
+
 
